@@ -1,0 +1,6 @@
+101,Mouse,1200
+102,KeyBoard,4500
+103,Ram,8000
+104,Monitor,5500
+105,Ups,8500
+106,DockingStation,15000
