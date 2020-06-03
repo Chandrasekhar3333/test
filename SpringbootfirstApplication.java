@@ -3,7 +3,6 @@ package com.springboot.productdata;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -16,7 +15,7 @@ public class SpringbootfirstApplication {
 		ProductsDataReader productDataReader=context.getBean(ProductsDataReader.class);
 		List<Product> productsCollection=null;
 		try {
-			productDataReader.readData();
+			productsCollection=productDataReader.readData();
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -24,17 +23,13 @@ public class SpringbootfirstApplication {
 		ProductDataWriter productDateWriter =context.getBean(ProductDataWriter.class);
 		
 		try {
-			System.out.println("calling");
 			productDateWriter.writeData(productsCollection);
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		
-		
-			
-		
-	}
+		}
 
 }
