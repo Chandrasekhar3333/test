@@ -9,33 +9,7 @@ import java.util.Scanner;
 import org.springframework.stereotype.Component;
 @Component
 public class ProductsDataReader {
-	//int productId=0;
- 
-	/*public List<String> readData() throws FileNotFoundException
-	{  
-		List<String> products=new ArrayList<String>();
-		BufferedReader br= new BufferedReader(new FileReader("src/main/resources/productdata.txt"));
-		try
-		{
-		   String product=br.readLine();
-		    while(product!=null)
-		      {
-		    	
-		    	products.add(product);
-		    	System.out.println(product);
-		    	product=br.readLine();
-		    	}
-		   br.close();
-		}
-		catch(IOException e)
-		{
-			e.printStackTrace();
-		}
-		
-		System.out.println(products.size());
-		System.out.println(products);
-		return products;
-		*/
+	
 	public List<Product> readData() throws FileNotFoundException
 	{  
 		int productId=0;
